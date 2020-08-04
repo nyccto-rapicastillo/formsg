@@ -28,7 +28,7 @@ notifications:
 before_script:
   - fluxbox >/dev/null 2>&1 &
   - pyenv global 3.7.1
-  - pip3 install --user localstack[full]
+  - pip3 install --user localstack
 
 script:
   - set -e
