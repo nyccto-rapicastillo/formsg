@@ -247,7 +247,6 @@ function ViewResponsesController(
   vm.loadResponses = function () {
     vm.currentView = 2
     vm.loading = true
-    console.log("calling load responses.")
     vm.tableParams = new NgTableParams(
       {
         page: 1, // show first page
@@ -255,7 +254,6 @@ function ViewResponsesController(
       },
       {
         getData: (params) => {
-          console.log("load responses is calling getData")
           let { page } = params.url()
           return Submissions.getMetadata({
             formId: vm.myform._id,
@@ -263,8 +261,6 @@ function ViewResponsesController(
             page,
           })
             .then((data) => {
-              console.log("get data has data returned")
-              console.log(data)
               params.total(data.count)
               vm.responsesCount = data.count
               return data.metadata
@@ -276,7 +272,6 @@ function ViewResponsesController(
         counts: [], // Remove page size options
       },
     )
-    console.log("finished calling load responses")
     vm.loading = false
   }
 
