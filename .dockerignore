@@ -9,3 +9,7 @@
 .eslintrc.json
 .prettierrc.json
 .travis.yml
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+.git
+.gitignore

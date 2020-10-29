@@ -45,7 +45,7 @@ before_deploy:
       # Put AWS in path
       export PATH=$PATH:$HOME/.local/bin
       # Login to AWS ECR, credentials defined in $AWS_ACCESS_KEY_ID and $AWS_SECRET_ACCESS_KEY
-      $(aws ecr get-login --no-include-email --region ap-southeast-1)
+      $(aws ecr get-login --no-include-email --region us-east-1)
       export TAG=travis-$TRAVIS_COMMIT-$TRAVIS_BUILD_NUMBER
       docker build -f Dockerfile.production -t $REPO:$TAG .
       docker tag $REPO:$TAG $REPO:$TRAVIS_BRANCH

@@ -33,7 +33,7 @@ const MAIL_CONFIG = {
 
 // Config for AWS.
 const AWS_CONFIG = {
-  region: 'ap-southeast-1',
+  region: 'us-east-1',
   endpoint: 'http://localhost:4572',
 }
 

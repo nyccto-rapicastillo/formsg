@@ -3,11 +3,10 @@ db.createCollection("agencies")
 db.agencies.insert([{
     "shortName" : "govtech",
     "fullName" : "Government Technology Agency",
-    "logo" : "https://s3-ap-southeast-1.amazonaws.com/agency.form.sg/govtech.jpg",
+    "logo" : "",
     "emailDomain" : [
-        "tech.gov.sg",
-        "data.gov.sg",
-        "form.sg",
-        "open.gov.sg"
+        "nyc.gov",
+        "cto.nyc.gov",
+        "cyber.nyc.gov"
     ],
 }])
